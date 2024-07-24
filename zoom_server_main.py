@@ -7,7 +7,7 @@ import numpy as np
 
 def connect_to_database():
     return mysql.connector.connect(
-        host="192.168.31.87",
+        host="ip address",
         user="zoom",
         password="0000",
         database="zoom_db"
@@ -187,7 +187,7 @@ class MyTCPServer(socketserver.ThreadingTCPServer):
     allow_reuse_address = True
 
 def start_server():
-    HOST, PORT = '192.168.31.87', 9999
+    HOST, PORT = 'ip address', 9999
     global server
     server = MyTCPServer((HOST, PORT), MyTCPHandler)
     print("Server listening on port 9999...")
