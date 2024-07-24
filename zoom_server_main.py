@@ -187,10 +187,10 @@ class MyTCPServer(socketserver.ThreadingTCPServer):
     allow_reuse_address = True
 
 def start_server():
-    HOST, PORT = 'ip address', 9999
+    HOST, PORT = 'ip address', port
     global server
     server = MyTCPServer((HOST, PORT), MyTCPHandler)
-    print("Server listening on port 9999...")
+    print("Server listening on port ...")
     server.serve_forever()
     return server
 
