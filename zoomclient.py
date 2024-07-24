@@ -41,8 +41,8 @@ amp = 15    # 진폭(amplitude)
 parlist = 0
 
 
-HOST = "192.168.31.87"
-PORT = 9999
+HOST = "ip address"
+PORT = port
 
 hostname = socket.gethostname()
 ip_address = socket.gethostbyname(hostname)
@@ -829,7 +829,7 @@ class App:
     def get_image_from_db2(self):
         try:
             conn = pymysql.connect(
-                host="192.168.31.87",
+                host="ipaddress",
                 user="zoom",
                 password="0000",
                 database="zoom_db"
@@ -1034,7 +1034,7 @@ class App:
     def get_image_from_db222(self):
         try:
             conn = pymysql.connect(
-                host="192.168.31.87",
+                host="ipaddress",
                 user="zoom",
                 password="0000",
                 database="zoom_db"
@@ -1065,10 +1065,7 @@ class App:
 
 
     def overlap_check(self): #중복체크 함수
-        # HOST = "192.168.31.53"
-        # PORT = 9999
-        # client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        # client_socket.connect((HOST, PORT))
+
         client_socket.send(("a123789" + self.id_entry.get()).encode())
         response = client_socket.recv(1024).decode()
         if response == "DUPLICATE":
@@ -1085,10 +1082,7 @@ class App:
             return
         if not self.check_par:
             messagebox.showinfo("Message", "회원가입이 완료되었습니다")
-            # HOST = "192.168.31.53"
-            # PORT = 9999
-            # client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            # client_socket.connect((HOST, PORT))
+
             self.signup_frame_2.pack_forget()
             self.show_login_frame()
             self.message_tuple = (
@@ -1202,7 +1196,7 @@ class App:
     def get_image_from_db22222222(self):
         try:
             conn = pymysql.connect(
-                host="192.168.31.87",
+                host="ip address",
                 user="zoom",
                 password="0000",
                 database="zoom_db"
@@ -1300,10 +1294,6 @@ class App:
         self.show_login_frame()
 
     def go_main(self, event):
-        # HOST = "192.168.31.53"
-        # PORT = 9999
-        # client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        # client_socket.connect((HOST, PORT))
         client_socket.send(("b987123" + self.login_id_entry.get()).encode())
         response = client_socket.recv(1024)
         name_and_pw = pickle.loads(response)
@@ -1410,7 +1400,7 @@ class App:
     def get_image_from_db22(self):
         try:
             conn = pymysql.connect(
-                host="192.168.31.87",
+                host="ip address",
                 user="zoom",
                 password="0000",
                 database="zoom_db"
@@ -1755,7 +1745,7 @@ class App:
     def exit_db(self):
         try:
             conn = pymysql.connect(
-                host="192.168.31.87",
+                host="ipaddress",
                 user="zoom",
                 password="0000",
                 database="zoom_db"
